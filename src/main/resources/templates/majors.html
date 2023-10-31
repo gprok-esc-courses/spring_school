@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+  <h1>School Web App</h1>
+  <h2>Majors</h2>
+
+  <div th:each="major : ${majors}">
+      <a th:href="${'/major/' + major.getId()}"><p th:text="${major.getName()}"></p></a>
+  </div>
+
+</body>
+</html>
