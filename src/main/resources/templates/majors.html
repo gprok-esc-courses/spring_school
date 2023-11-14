@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
+<section>
   <h1>School Web App</h1>
   <h2>Majors</h2>
 
   <div th:each="major : ${majors}">
-      <a th:href="${'/major/' + major.getId()}"><p th:text="${major.getName()}"></p></a>
+      <a th:href="${'/major/' + major.getId()}"><p th:text="${major.getName()}">Major Name</p></a>
   </div>
-
+</section>
 </body>
 </html>
